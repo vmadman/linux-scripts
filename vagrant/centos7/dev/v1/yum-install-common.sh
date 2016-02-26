@@ -6,4 +6,4 @@
 echo ""
 echo "[Provision-Script] Installing Common Utils & Libraries"
 echo ""
-yum install -y mlocate pico
+yum install -y mlocate nano
