@@ -7,7 +7,8 @@
 
 NMSL_PROJECT_DIR="/project"
 NMSL_PROJECT_NM="$NMSL_PROJECT_DIR/node_modules"
-NMSL_STORE_PATH="/home/vagrant/node_modules"
+NMSL_BASE_PATH="/home/vagrant"
+NMSL_STORE_PATH="$NMSL_BASE_PATH/node_modules"
 
 echo ""
 echo "[Provision-Script] Creating Symlink for node_modules"
@@ -32,5 +33,10 @@ ln -s "$NMSL_STORE_PATH" "$NMSL_PROJECT_NM"
 echo "   > Applying permissions to node_modules store"
 
 chown vagrant:vagrant "$NMSL_STORE_PATH" -R
+
+echo "   > Reverse linking package.json"
+
+rm -f "$NMSL_BASE_PATH/package.json"
+ln -s "$NMSL_PROJECT_DIR/package.json" "$NMSL_BASE_PATH/package.json"
 
 echo ""
