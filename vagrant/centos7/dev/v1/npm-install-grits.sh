@@ -6,4 +6,5 @@ echo ""
 echo "[Provision-Script] Installing Grits"
 echo ""
 
-npm install -g grits
+#npm install -g grits
+npm install -g git+https://github.com/Dasix/grits.git
