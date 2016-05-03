@@ -6,6 +6,7 @@ echo ""
 echo "[Provision-Script] Adding Yum Repo for NodeSource"
 echo ""
 curl --silent --location https://rpm.nodesource.com/setup_4.x | bash -
+yum makecache fast
 
 echo ""
 echo "[Provision-Script] Installing Node.js"
