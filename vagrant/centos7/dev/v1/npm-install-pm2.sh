@@ -7,3 +7,4 @@ echo "[Provision-Script] Installing PM2"
 echo ""
 
 npm install -g pm2
+pm2 startup centos
