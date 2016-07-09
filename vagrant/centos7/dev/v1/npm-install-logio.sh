@@ -6,4 +6,4 @@ echo ""
 echo "[Provision-Script] Installing Log.io"
 echo ""
 
-npm install -g log.io
+npm install -g log.io --user "vagrant"
