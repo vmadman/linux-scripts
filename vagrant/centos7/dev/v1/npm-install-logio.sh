@@ -6,6 +6,9 @@ echo ""
 echo "[Provision-Script] Installing Log.io"
 echo ""
 
-mkdir /root/.log.io
-chmod 0777 /root/.log.io
-npm install -g log.io --user "vagrant"
+#mkdir /root/.log.io
+#chmod 0777 /root/.log.io
+#npm install -g log.io --user "vagrant"
+
+cd ~
+npm install log.io
