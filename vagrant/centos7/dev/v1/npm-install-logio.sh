@@ -11,4 +11,4 @@ echo ""
 #npm install -g log.io --user "vagrant"
 
 cd ~
-npm install log.io
+npm install log.io --unsafe-perm
