@@ -8,4 +8,6 @@ echo "[Provision-Script] Creating Global NPM Link"
 echo ""
 
 cd /project
+npm cache clean
+npm install --no-bin-links
 npm link
