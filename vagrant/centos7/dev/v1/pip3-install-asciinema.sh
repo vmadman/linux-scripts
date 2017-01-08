@@ -5,7 +5,6 @@
 
 echo ""
 echo "[Provision-Script] Installing Asciinema"
-echo ""
 
 pip3 install asciinema
 
@@ -19,12 +18,14 @@ ASCIINEMA_ALIAS_AUTH="$ASCIINEMA_ALIAS_DIR/acna"
 ASCIINEMA_ALIAS_REC="$ASCIINEMA_ALIAS_DIR/acnr"
 
 # Create acn symlink
+echo ""
 echo "    - Remove existing symlinks ..."
 echo ""
 rm -rf /usr/bin/acn
 
 
 # Create acn symlink
+echo ""
 echo "    - Creating 'acn' symlink ..."
 echo "        $ASCIINEMA_MAIN -> $ASCIINEMA_ALIAS_MAIN"
 echo ""
@@ -43,6 +44,7 @@ ASCIINEMA_VERSION=`acn --version`
 
 
 
+echo ""
 echo ""
 echo "  -- Asciinema has been installed -- "
 echo ""
