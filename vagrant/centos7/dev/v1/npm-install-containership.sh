@@ -7,3 +7,4 @@ echo "[Provision-Script] Installing ContainerShip CLI"
 echo ""
 
 npm install -g containership
+cs plugin add cloud
