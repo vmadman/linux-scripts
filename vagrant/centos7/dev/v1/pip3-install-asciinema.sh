@@ -23,7 +23,7 @@ ln -s /bin/asciinema /usr/bin/acn
 ASCIINEMA_MAIN=`which asciinema`
 
 echo ""
-echo "  -- Asciinema has been installed -- "
+echo "  -- Asciinema has been installed 2 -- "
 echo ""
 echo "      Usage Docs: https://asciinema.org/docs/getting-started"
 echo "      Main Entrypoint: $ASCIINEMA_MAIN"
