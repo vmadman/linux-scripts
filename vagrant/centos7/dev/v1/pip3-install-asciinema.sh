@@ -4,7 +4,7 @@
 # requires: yum-install-python3.sh
 
 echo ""
-echo "[Provision-Script] Installing Asciinema"
+echo "[Provision-Script] Installing Asciinema using Pip3"
 
 #pip3 install asciinema
 
