@@ -5,5 +5,9 @@
 echo ""
 echo "[Provision-Script] Installing Python 3.x"
 echo ""
+
 yum -y install python34 python34-pip
 python3 --version
+
+pip3 install --upgrade pip
+pip3 --version
