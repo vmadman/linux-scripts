@@ -20,7 +20,10 @@ ln -s /bin/asciinema /usr/bin/acn
 # [root@containership project]# echo 'hi' >> /usr/bin/acn
 # [root@containership project]# cat /usr/bin/acn
 
-
+ASCIINEMA_MAIN=`which asciinema`
 
 echo ""
 echo "  -- Asciinema has been installed -- "
+echo ""
+echo "      Usage Docs: https://asciinema.org/docs/getting-started"
+echo "      Main Entrypoint: $ASCIINEMA_MAIN"
