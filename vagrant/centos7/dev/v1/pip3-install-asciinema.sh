@@ -4,12 +4,14 @@
 # requires: yum-install-python3.sh
 
 echo ""
-echo "[Provision-Script] Installing Asciinema using Pip3"
+echo "[Provision-Script] Installing Asciinema"
+echo ""
+pip3 install asciinema
 
-#pip3 install asciinema
 
 # Find install location
 ASCIINEMA_MAIN=`which asciinema`
+
 
 # Set up some basic vars
 ASCIINEMA_ALIAS_DIR="/usr/bin"
@@ -17,17 +19,19 @@ ASCIINEMA_ALIAS_MAIN="$ASCIINEMA_ALIAS_DIR/acn"
 ASCIINEMA_ALIAS_AUTH="$ASCIINEMA_ALIAS_DIR/acna"
 ASCIINEMA_ALIAS_REC="$ASCIINEMA_ALIAS_DIR/acnr"
 
-# Create acn symlink
-echo ""
+
+
+# Clean up previous executions
 echo "    - Remove existing symlinks ..."
 echo ""
 rm -rf /usr/bin/acn
+rm -rf /usr/bin/acna
+rm -rf /usr/bin/acnr
+
 
 
 # Create acn symlink
-echo ""
 echo "    - Creating 'acn' symlink ..."
-echo "        $ASCIINEMA_MAIN -> $ASCIINEMA_ALIAS_MAIN"
 echo ""
 ln -s "$ASCIINEMA_MAIN" "$ASCIINEMA_ALIAS_MAIN"
 
@@ -35,15 +39,38 @@ ln -s "$ASCIINEMA_MAIN" "$ASCIINEMA_ALIAS_MAIN"
 ASCIINEMA_VERSION=`acn --version`
 
 
-# [root@containership project]# echo '#!/bin/bash' > /usr/bin/acn
-# [root@containership project]# cat /usr/bin/acn
-# #!/bin/bash
-# [root@containership project]# echo '' >> /usr/bin/acn
-# [root@containership project]# echo 'hi' >> /usr/bin/acn
-# [root@containership project]# cat /usr/bin/acn
+
+# Common variables for alias scripts
+ALIAS_SCRIPT_L1='#!/bin/bash'
+ALIAS_SCRIPT_L2=''
 
 
 
+# Create acna alias for "asciinema auth"
+echo "    - Creating 'acna' convenience script ..."
+echo ""
+
+echo "$ALIAS_SCRIPT_L1" > "$ASCIINEMA_ALIAS_AUTH"
+echo "$ALIAS_SCRIPT_L2" >> "$ASCIINEMA_ALIAS_AUTH"
+echo "$ASCIINEMA_MAIN auth" >> "$ASCIINEMA_ALIAS_AUTH"
+
+chmod 0777 "$ASCIINEMA_ALIAS_AUTH"
+
+
+
+# Create acna alias for "asciinema auth"
+echo "    - Creating 'acnr' convenience script ..."
+echo ""
+
+echo "$ALIAS_SCRIPT_L1" > "$ASCIINEMA_ALIAS_REC"
+echo "$ALIAS_SCRIPT_L2" >> "$ASCIINEMA_ALIAS_REC"
+echo "$ASCIINEMA_MAIN rec" >> "$ASCIINEMA_ALIAS_REC"
+
+chmod 0777 "$ASCIINEMA_ALIAS_REC"
+
+
+
+# Tell the user ..
 echo ""
 echo ""
 echo "  -- Asciinema has been installed -- "
@@ -56,4 +83,3 @@ echo "         Main Symlink : $ASCIINEMA_ALIAS_MAIN"
 echo "         Auth Symlink : $ASCIINEMA_ALIAS_AUTH"
 echo "       Record Symlink : $ASCIINEMA_ALIAS_REC"
 echo ""
-
