@@ -6,7 +6,7 @@
 echo ""
 echo "[Provision-Script] Installing Asciinema"
 
-pip3 install asciinema
+#pip3 install asciinema
 
 # Find install location
 ASCIINEMA_MAIN=`which asciinema`
