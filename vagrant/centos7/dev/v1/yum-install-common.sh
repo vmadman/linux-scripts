@@ -6,4 +6,4 @@
 echo ""
 echo "[Provision-Script] Installing Common Utils & Libraries"
 echo ""
-yum install -y mlocate nano unzip
+yum install -y mlocate nano unzip dos2unix
