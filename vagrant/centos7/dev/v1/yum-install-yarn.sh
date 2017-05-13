@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script installs Yarn (A package manager that replaces NPM and/or Bower)
+# This script installs Yarn (A package manager that replaces NPM and, perhaps, Bower)
 # More info here: https://yarnpkg.com/en/
 
 echo ""
