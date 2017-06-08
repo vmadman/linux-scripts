@@ -8,4 +8,5 @@ echo ""
 echo "[Provision-Script] Installing Log.io (via Yarn)"
 echo ""
 
-yarn global add logio
+#yarn global add logio
+yarn global add adrielldagasuan/Log.io
