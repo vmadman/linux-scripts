@@ -10,3 +10,4 @@ echo ""
 
 yarn global add pm2
 pm2 startup centos
+pm2 update
