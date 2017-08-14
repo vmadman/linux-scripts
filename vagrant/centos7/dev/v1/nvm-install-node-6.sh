@@ -22,6 +22,5 @@ export NVM_DIR="$HOME/.nvm"
 echo ""
 echo "[Provision-Script] Installing Node.js 6.x"
 echo ""
-echo "<todo>"
-echo ""
-nvm --version
+nvm install 6 --lts
+nvm use 6
