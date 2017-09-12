@@ -48,5 +48,9 @@ cd "$HUB_INSTALL_TO"
 rm -f "/usr/sbin/hub"
 ln -s "$HUB_INSTALL_TO/bin/hub" "/usr/sbin/hub"
 
+# Create Alias
+alias git=hub
+
 # Cleanup
 rm -rf "$HUB_DOWNLOAD_DIR/hub"
+
