@@ -8,4 +8,4 @@ echo "[Provision-Script] Creating Global Yarn Link"
 echo ""
 
 cd /project
-yarn global link
+yarn link
